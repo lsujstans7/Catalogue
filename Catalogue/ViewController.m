@@ -67,12 +67,22 @@
     // IndexPath is an object that has both a section and a row property
     // Our catalogue stores both Book's and CD's - but since both are subclasses
     // of Item we can declare it universally as a Item
-    Book *bookInstance = [self.items objectAtIndex:indexPath.row];
+    Item *instance = [self.items objectAtIndex:indexPath.row];
     
     
     // Set the value of our cell's textLabel
-    cell.textLabel.text = bookInstance.title;
-    
+    if ([instance isMemberOfClass:[Book class]]) 
+    {
+        Book *book = (Book *) instance;
+        cell.textLabel.text = book.title;
+    }
+    else if ([instance isMemberOfClass:[CD class]])
+    {
+        CD *cd = (CD *) instance;
+        cell.textLabel.text = cd.label;
+    }
+    //cell.textLabel.text = [NSString stringWithFormat:@"$%.02f",instance.price];
+        
     return cell;
 }
 

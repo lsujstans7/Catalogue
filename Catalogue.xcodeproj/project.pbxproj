@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BE528DC15CC5D390073CB71 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE528DB15CC5D390073CB71 /* ItemCell.m */; };
 		7AD252FB15CC263A002E38DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD252FA15CC263A002E38DA /* UIKit.framework */; };
 		7AD252FD15CC263A002E38DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD252FC15CC263A002E38DA /* Foundation.framework */; };
 		7AD252FF15CC263A002E38DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD252FE15CC263A002E38DA /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BE528DA15CC5D390073CB71 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		5BE528DB15CC5D390073CB71 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		7AD252F615CC263A002E38DA /* Catalogue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalogue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD252FA15CC263A002E38DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7AD252FC15CC263A002E38DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +94,8 @@
 				7AD2530C15CC263A002E38DA /* MainStoryboard.storyboard */,
 				7AD2530F15CC263A002E38DA /* ViewController.h */,
 				7AD2531015CC263A002E38DA /* ViewController.m */,
+				5BE528DA15CC5D390073CB71 /* ItemCell.h */,
+				5BE528DB15CC5D390073CB71 /* ItemCell.m */,
 				7AD2531715CC2663002E38DA /* Item.h */,
 				7AD2531815CC2663002E38DA /* Item.m */,
 				7AD2531A15CC267A002E38DA /* Book.h */,
@@ -182,6 +187,7 @@
 				7AD2531915CC2663002E38DA /* Item.m in Sources */,
 				7AD2531C15CC267A002E38DA /* Book.m in Sources */,
 				7AD2531F15CC2686002E38DA /* CD.m in Sources */,
+				5BE528DC15CC5D390073CB71 /* ItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +303,7 @@
 				7AD2531615CC263A002E38DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
