@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Book.h"
 #import "CD.h"
+#import "ItemCell.h"
 
 @interface ViewController ()
 
@@ -61,7 +62,7 @@
     // We use UITableView's insntance method -(UITableViewCell *)dequeueReusableCellWithIdentifier to
     // Return a TableViewCell that is memory efficient
     // We pass it the same string that we have used as an identifier in our Interface
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCell"];
+    ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCell"];
     
     // First we have to get the Item for the current row
     // IndexPath is an object that has both a section and a row property
@@ -74,12 +75,20 @@
     if ([instance isMemberOfClass:[Book class]]) 
     {
         Book *book = (Book *) instance;
-        cell.textLabel.text = book.title;
+        //cell.textLabel.text = book.title;
+        cell.mainLabel.text = book.title;
+        cell.smallLabel.text = book.author;
+        cell.rightLabel.text = [NSString stringWithFormat:@"$%.02f", book.price];
+        cell.itemImage.image = [UIImage imageNamed:@"book.png"];
     }
     else if ([instance isMemberOfClass:[CD class]])
     {
         CD *cd = (CD *) instance;
-        cell.textLabel.text = cd.label;
+        //cell.textLabel.text = cd.label;
+        cell.mainLabel.text = cd.label;
+        cell.smallLabel.text = cd.artist;
+        cell.rightLabel.text = [NSString stringWithFormat:@"$%.02f", cd.price];
+        cell.itemImage.image = [UIImage imageNamed:@"cd.png"];
     }
     //cell.textLabel.text = [NSString stringWithFormat:@"$%.02f",instance.price];
         

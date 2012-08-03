@@ -10,4 +10,9 @@
 
 @interface ItemCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *mainLabel;
+@property (nonatomic, weak) IBOutlet UILabel *smallLabel;
+@property (nonatomic, weak) IBOutlet UILabel *rightLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *itemImage;
+ 
 @end

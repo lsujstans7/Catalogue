@@ -9,6 +9,10 @@
 #import "ItemCell.h"
 
 @implementation ItemCell
+@synthesize mainLabel = _mainLabel;
+@synthesize smallLabel = _smallLabel;
+@synthesize rightLabel = _rightLabel;
+@synthesize itemImage = _itemImage;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
